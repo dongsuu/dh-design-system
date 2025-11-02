@@ -25,8 +25,21 @@ export const buttonRecipe = cva({
       color: 'disabled.fg',
       borderColor: 'disabled.border',
     },
+    minWidth: '44px',
+    minHeight: '44px'
   },
   variants: {
+    radius: {
+      none: { borderRadius: 'none' },
+      small: { borderRadius: 'sm' },
+      medium: { borderRadius: 'md' },
+      large: { borderRadius: 'lg' },
+      full: { borderRadius: 'full' },
+      // semantic radii
+      control: { borderRadius: 'control' },
+      card: { borderRadius: 'card' },
+      pill: { borderRadius: 'pill' },
+    },
     variant: {
       solid: {
         bg: 'bg.primary',
@@ -66,5 +79,6 @@ export const buttonRecipe = cva({
   defaultVariants: {
     variant: 'solid',
     size: 'medium',
+    radius: 'medium',
   },
 });
